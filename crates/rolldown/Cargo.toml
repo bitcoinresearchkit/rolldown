@@ -1,6 +1,6 @@
 [package]
-name = "rolldown"
-version = "0.1.0"
+name = "brk_rolldown"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true
@@ -74,12 +74,17 @@ xxhash-rust = { workspace = true, features = ["xxh3"] }
 [dev-dependencies]
 glob = { workspace = true }
 insta = { workspace = true }
-rolldown_dev = { path = "../rolldown_dev" }
-rolldown_testing = { path = "../rolldown_testing" }
+# rolldown_dev = { path = "../rolldown_dev" }
+# rolldown_testing = { workspace = true }
 rolldown_workspace = { workspace = true }
 sugar_path = { workspace = true }
 testing_macros = { workspace = true }
-tokio = { workspace = true, features = ["rt", "macros", "sync", "rt-multi-thread"] }
+tokio = { workspace = true, features = [
+  "rt",
+  "macros",
+  "sync",
+  "rt-multi-thread",
+] }
 
 [package.metadata.cargo-shear]
 # `serde_json` is used in `trace_action` macro.

@@ -180,3 +180,5 @@ crates/rolldown_devtools_action/bindings/**
 # AI config
 .claude
 CLAUDE.local.md
+
+.DS_Store
